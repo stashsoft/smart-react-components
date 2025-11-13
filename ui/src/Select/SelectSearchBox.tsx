@@ -11,6 +11,7 @@ import { Theme } from '@smart-react-components/core/theme'
 import { ContentElement, JSXChildren, JSXElementProps, PaletteProp, ResponsiveProp, SetState, ShapeProp, SizeProp } from '@smart-react-components/core/types'
 import React from 'react'
 import { useTheme } from 'styled-components'
+import DropdownItemElement from '../components/Dropdown/DropdownItemElement'
 import DropdownListElement from '../components/Dropdown/DropdownListElement'
 import useSelectBoxHover from '../hooks/useSelectBoxHover'
 import useSelectSearch from '../hooks/useSelectSearch'
@@ -126,6 +127,31 @@ const SelectSearchBox = React.forwardRef<HTMLInputElement, Props>((props, forwar
         isSoft={props.isSoft}
         palette={props.palette}
       >
+        <DropdownItemElement
+          hasHover={false}
+          isActive={false}
+          isHovered={false}
+          isDisabled={false}
+          isOutline={props.isOutline}
+          isSoft={props.isSoft}
+          palette={props.palette}
+        >
+          <Input
+            containerProps={{
+              displayMd: 'none',
+            }}
+            isOutline={props.isOutline}
+            isSoft={props.isSoft}
+            palette={props.palette}
+            setValue={props.setValue}
+            size={props.size}
+            sizeSm={props.sizeSm}
+            sizeMd={props.sizeMd}
+            sizeLg={props.sizeLg}
+            sizeXl={props.sizeXl}
+            value={props.value}
+          />
+        </DropdownItemElement>
         { optionList.map((item, idx) => item && React.cloneElement(item, {
           key: item.key ?? idx,
           active: props.value,
