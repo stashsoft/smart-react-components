@@ -19,7 +19,7 @@
     "@smart-react-components/core": "2.1.0",
     "@smart-react-components/router": "2.1.0",
     "@smart-react-components/transition": "2.1.0",
-    "@smart-react-components/ui": "2.1.8",
+    "@smart-react-components/ui": "2.1.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "5.3.5"
